@@ -10,8 +10,8 @@ import { db } from "@/lib/db";
 import { ServerHeader } from "./server-header";
 import { ServerSearch } from "./server-search";
 import { ServerSection } from "./server-section";
-// import { ServerChannel } from "./server-channel";
-// import { ServerMember } from "./server-member";
+import { ServerChannel } from "./server-channel";
+import { ServerMember } from "./server-member";
 
 interface ServerSidebarProps {
     serverId: string;
@@ -125,9 +125,9 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                             label="Text Channels"
                         />
                         <div className="space-y-[2px]">
-                            {/* {textChannels.map((channel) => (
+                            {textChannels.map((channel) => (
                                 <ServerChannel key={channel.id} channel={channel} role={role} server={server} />
-                            ))} */}
+                            ))}
                         </div>
                     </div>
                 )}
@@ -140,9 +140,9 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                             label="Voice Channels"
                         />
                         <div className="space-y-[2px]">
-                            {/* {audioChannels.map((channel) => (
+                            {audioChannels.map((channel) => (
                                 <ServerChannel key={channel.id} channel={channel} role={role} server={server} />
-                            ))} */}
+                            ))}
                         </div>
                     </div>
                 )}
@@ -155,9 +155,9 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                             label="Video Channels"
                         />
                         <div className="space-y-[2px]">
-                            {/* {videoChannels.map((channel) => (
+                            {videoChannels.map((channel) => (
                                 <ServerChannel key={channel.id} channel={channel} role={role} server={server} />
-                            ))} */}
+                            ))}
                         </div>
                     </div>
                 )}
@@ -165,9 +165,9 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                     <div className="mb-2">
                         <ServerSection sectionType="members" role={role} label="Members" server={server} />
                         <div className="space-y-[2px]">
-                            {/* {members.map((member) => (
+                            {members.map((member) => (
                                 <ServerMember key={member.id} member={member} server={server} />
-                            ))} */}
+                            ))}
                         </div>
                     </div>
                 )}
